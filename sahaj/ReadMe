@@ -1,0 +1,82 @@
+This code can be built and run using Gradle.
+Please import it as a gradle project.
+
+The test cases are under the test folder.
+Implemented test cases for most methods.
+
+
+To run - please run the Application class which contains the main class.
+output will be shown on console.
+
+Sample input and output-
+
+Number of floors:
+2
+Main Corridors per floor:
+1
+Sub Corridors per floor:
+2
+Floor 1
+  Main corridor 1
+    Light 1 : ON
+    AC  :ON
+  Sub corridor 1
+    Light 1 : OFF
+    AC  :ON
+  Sub corridor 2
+    Light 1 : OFF
+    AC  :ON
+Floor 2
+  Main corridor 1
+    Light 1 : ON
+    AC  :ON
+  Sub corridor 1
+    Light 1 : OFF
+    AC  :ON
+  Sub corridor 2
+    Light 1 : OFF
+    AC  :ON
+
+Movement in Floor 1, Sub corridor 2
+Floor 1
+  Main corridor 1
+    Light 1 : ON
+    AC  :ON
+  Sub corridor 1
+    Light 1 : OFF
+    AC  :OFF
+  Sub corridor 2
+    Light 1 : ON
+    AC  :ON
+Floor 2
+  Main corridor 1
+    Light 1 : ON
+    AC  :ON
+  Sub corridor 1
+    Light 1 : OFF
+    AC  :ON
+  Sub corridor 2
+    Light 1 : OFF
+    AC  :ON
+
+No movement in Floor 1, Sub corridor 2 for a minute
+Floor 1
+  Main corridor 1
+    Light 1 : ON
+    AC  :ON
+  Sub corridor 1
+    Light 1 : OFF
+    AC  :ON
+  Sub corridor 2
+    Light 1 : OFF
+    AC  :ON
+Floor 2
+  Main corridor 1
+    Light 1 : ON
+    AC  :ON
+  Sub corridor 1
+    Light 1 : OFF
+    AC  :ON
+  Sub corridor 2
+    Light 1 : OFF
+    AC  :ON
