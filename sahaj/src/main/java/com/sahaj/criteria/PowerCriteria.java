@@ -22,12 +22,22 @@ public class PowerCriteria implements  Criteria{
 
     }
 
+    /**
+     * calculate max consumption
+     * @param floor
+     * @return
+     */
     private int maxConsumption(Floor floor) {
         List<MainCorridor> mainCorridors = floor.getMainCorridors();
         List<SubCorridor> subCorridors = floor.getSubCorridors();
         return (mainCorridors.size() * 15) + subCorridors.size() * 10;
     }
 
+    /**
+     * get floor power consumption
+     * @param floor
+     * @return
+     */
     private int getFloorConsumption(Floor floor){
 
         List<MainCorridor> mainCorridors = floor.getMainCorridors();

@@ -26,6 +26,11 @@ public class LightAndACPowerController implements Observer {
         controlSubCorridorsLights(motion, (Boolean) arg);
     }
 
+    /**
+     * controlSubCorridorsLights controls the subcorridors
+     * @param motion
+     * @param isOn
+     */
     private void controlSubCorridorsLights(Motion motion, boolean isOn) {
         Floor correspondingFloor = getMatchingFloor(hotel, motion);
         SubCorridor correspondingSubCorridor =getMatchingSubCorridor(motion, correspondingFloor);
@@ -47,6 +52,12 @@ public class LightAndACPowerController implements Observer {
     }
 
 
+    /**
+     * decisionOperation submethod to check if power limit has exceeded and take action accordingly
+     * @param motion
+     * @param floor
+     * @param subcorridor
+     */
     private void decisionOperation(Motion motion,Floor floor,SubCorridor subcorridor){
         PowerCriteria powerCriteria = new PowerCriteria();
         //if power  exceeded
@@ -72,7 +83,14 @@ public class LightAndACPowerController implements Observer {
         return subCorridorMap;
     }
 
-
+    /**
+     * findASubCorridor find another subcorridor in the same Floor. If there are no other SubCorridors
+     * returns the only SubCorridor in that floor.
+     * @param motion
+     * @param floor
+     * @param subCorridor
+     * @return SubCorridor
+     */
 
     public SubCorridor findASubCorridor(Motion motion,Floor floor,SubCorridor subCorridor){
         SubCorridor otherSubCorridor=null;
@@ -116,6 +134,13 @@ public class LightAndACPowerController implements Observer {
     }
 
 
+    /**
+     * getMatchingSubCorridor gets corresponding subcorridor
+     *
+     * @param motion
+     * @param currentfloor
+     * @return
+     */
     public SubCorridor getMatchingSubCorridor(Motion motion,
                                                Floor currentfloor) {
 
