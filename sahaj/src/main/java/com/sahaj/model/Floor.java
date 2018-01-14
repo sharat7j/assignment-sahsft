@@ -9,6 +9,11 @@ public class Floor {
     private int number;
     private List<MainCorridor> mainCorridors;
     private List<SubCorridor> subCorridors;
+
+    public Floor(int number) {
+        this.number = number+1;
+    }
+
     public int getNumber() {
         return number;
     }
@@ -36,7 +41,7 @@ public class Floor {
 //override toString to print floor number starting from 1
     @Override
     public String toString() {
-        return "Floor " + (number + 1);
+        return "Floor " + (number);
     }
 
 }
